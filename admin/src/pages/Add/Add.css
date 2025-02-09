@@ -1,0 +1,113 @@
+/* Add Product Container */
+.add {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fdfcfc32;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Upload Image Section */
+.add-img-upload {
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px dashed #007bff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-img-upload:hover {
+    background: #f0f8ff;
+}
+
+.add-img-upload img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* Input Fields */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Product Name & Description */
+.add-product-name, .add-product-description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Category & Price Layout */
+.add-category-price {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.add-category, .add-price {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+}
+
+/* Add Button */
+.add-button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .add {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .add-category-price {
+        flex-direction: column;
+    }
+}

@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Outfit;
+  scroll-behavior: smooth;
 }
 body{
   min-height: 100vh;
@@ -17,6 +18,10 @@ a{
 .app{
   width: 80%;
   margin: auto;
+}
+#root{
+    background: rgba(119, 106, 106, 0.305);
+
 }
 
 @keyframes fadeIn {

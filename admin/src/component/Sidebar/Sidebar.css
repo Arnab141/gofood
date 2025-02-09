@@ -1,0 +1,96 @@
+.sidebar {
+    width: 18%;
+    min-height: 100vh;
+    border: 3px solid #a9a9a9;
+    border-top: 0;
+    font-size: max(1vw, 10px);
+    
+}
+
+/* Sidebar options styling */
+.sidebar-options {
+    padding-top: 50px;
+    padding-left: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Individual sidebar option */
+.sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #a9a9a9;
+    border-right: 0;
+    padding: 8px 10px;
+    border-radius: 3px 0px 0px 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.sidebar-options .active {
+    background-color: #d1e7fd;
+    border-left: 4px solid #007bff;
+    font-weight: bold;
+    color: #007bff;
+    transform: translateX(5px);
+}
+/* Hover Effect */
+.sidebar-option:hover {
+    background-color: #f0f0f0; /* Light gray hover effect */
+    transform: translateX(1px); /* Slight movement to the right */
+}
+
+/* Media Queries for responsiveness */
+
+/* Tablets (width < 1024px) */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 25%; /* Increase sidebar width for better readability */
+        font-size: max(1.2vw, 12px);
+    }
+    .sidebar-options {
+        padding-left: 15%;
+    }
+}
+
+/* Mobile devices (width < 768px) */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 35%; /* Make sidebar wider for mobile */
+        font-size: max(1.5vw, 12px);
+    }
+    .sidebar-options {
+        padding-left: 10%;
+        gap: 15px;
+    }
+    .sidebar-option {
+        gap: 8px;
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}
+
+/* Small screens (width < 480px) */
+@media screen and (max-width: 480px) {
+    .sidebar {
+        width: 50%; /* Sidebar takes half screen */
+        position: fixed;
+        left: -50%; /* Initially hidden, slide in on toggle */
+        top: 0;
+        height: 100vh;
+        background: #fff;
+        transition: left 0.3s ease-in-out;
+    }
+    .sidebar.show {
+        left: 0; /* Show sidebar when toggled */
+    }
+    .sidebar-options {
+        padding-left: 5%;
+        gap: 12px;
+    }
+    .sidebar-option {
+        font-size: 11px;
+        padding: 5px 7px;
+    }
+}
