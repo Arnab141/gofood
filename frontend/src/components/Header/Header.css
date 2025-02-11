@@ -1,13 +1,30 @@
-.header{
+.header {
     height: 34vw;
     margin: 30px auto;
-    background: url('../../assets/frontend_assets/header_img.jpg') no-repeat;
-    background-size: contain;
     position: relative;
     border-radius: 1cm;
-    
+    overflow: hidden;
 }
-.header-contents{
+
+/* Slideshow wrapper */
+.header-slideshow {
+    display: flex;
+    width: 100%; /* Since we have 5 images + 1 cloned image */
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Individual slide */
+.header-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+/* Header contents */
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -16,29 +33,30 @@
     max-width: 50%;
     bottom: 10%;
     left: 6vw;
-    animation: fadeIn 3s ;
+    animation: fadeIn 3s;
+    color: white;
 }
-.header-contents h2{
+
+.header-contents h2 {
     font-weight: 500;
-    color: white;
-    font-size: max(4.5vw,22px);
+    font-size: max(4.5vw, 22px);
 }
-.header-contents p{
-    color: white;
+
+.header-contents p {
     font-size: 1vw;
 }
-.header-contents button{
+
+.header-contents button {
     border: none;
     color: #747474;
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
-    font-size: max(1vw,13px);
-    border-radius:50px ;
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
 }
 
-
-
+/* Cart popup */
 .show-cart-popup {
     position: fixed;
     bottom: 20px;
@@ -52,16 +70,7 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    z-index: 1000;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
 }
-
-.show-cart-popup.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
 
 .show-cart-popup p {
     margin: 0;
@@ -84,25 +93,20 @@
     background-color: #e65c00;
 }
 
-
-
-
-
-
-@media (max-width:1050px){
- .header-contents{
-    max-width: 45%;
- }
-}
-@media (max-width:750px){
-    
-    .header-contents{
-       max-width: 75%;
+@media (max-width: 1050px) {
+    .header-contents {
+        max-width: 45%;
     }
-    .header-contents p{
+}
+
+@media (max-width: 750px) {
+    .header-contents {
+        max-width: 75%;
+    }
+    .header-contents p {
         display: none;
     }
-    .header-contents button{
+    .header-contents button {
         padding: 2vw 4vw;
     }
 }

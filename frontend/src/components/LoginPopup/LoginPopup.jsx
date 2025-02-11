@@ -5,7 +5,7 @@ import { StoreContext } from '../../context/StoreContext';
 import axios from 'axios';
 
 function LoginPopup({ setShowLogin }) {
-    const { url, token, setToken } = useContext(StoreContext);
+    const { url, setToken } = useContext(StoreContext);
 
     const [currState, setCurrState] = useState('Login');
     const [data, setData] = useState({
@@ -21,20 +21,22 @@ function LoginPopup({ setShowLogin }) {
 
     const onLogin = async (event) => {
         event.preventDefault();
-        let newUrl = url + (currState === "Login" ? "api/user/login" : "api/user/register");
+        let newUrl = `${url}/api/user/${currState === "Login" ? "login" : "register"}`;
 
         try {
             const response = await axios.post(newUrl, data);
             if (response.data.success) {
-                setToken(response.data.token);
-                localStorage.setItem("token", response.data.token);
+                if (response.data.token) {
+                    setToken(response.data.token);
+                    localStorage.setItem("token", response.data.token);
+                }
                 setShowLogin(false);
             } else {
                 alert(response.data.message);
             }
         } catch (error) {
             console.error("Login/Register Error:", error);
-            alert("Something went wrong! Please try again.");
+            alert(error.response?.data?.message || "Something went wrong! Please try again.");
         }
     };
 

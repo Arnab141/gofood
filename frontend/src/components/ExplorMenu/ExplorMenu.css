@@ -4,6 +4,35 @@
     gap: 20px;
 
 }
+.explor-menu-container{
+    display: flex;
+    align-items: center;
+}
+.left {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    
+}
+.right {
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    
+}
+.scroll-btn {
+  color: black;
+  background-color: rgb(181, 123, 113);
+  font-weight: bold; 
+ border-radius: 1cm;
+}
+.scroll-btn:hover{
+    background-color: tomato;
+}
+
+
+
+
 .explor-menu h1{
     color: #262626;
     font-weight: 500;
@@ -12,7 +41,7 @@
     max-width: 60%;
     color: #808080;
 }
-.explor-menu-list{
+/* .explor-menu-list{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +49,18 @@
     text-align: center;
     margin: 20px 0px;
     overflow: scroll;
+} */
+.explor-menu-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 100%;
+    padding: 10px 0;
 }
 .explor-menu-list::-webkit-scrollbar{
     display: none;
