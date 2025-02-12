@@ -153,7 +153,7 @@ food-item-name-rating img{
     right: 15px;
     cursor: pointer;
     border-radius: 8px; /* Slightly rounded corners */
-    background-color: white;
+    background-color: rgb(253, 142, 102);
     padding: 5px 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: all 0.3s ease-in-out;
@@ -166,7 +166,7 @@ food-item-name-rating img{
 
 .food-item-img-container .add:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, #ff9800, #ff5722); /* Orange to Red Gradient */
+    background: linear-gradient(135deg, #ff9800, #ff440b); /* Orange to Red Gradient */
     color: white;
     border: none;
     box-shadow: 0px 6px 12px rgba(255, 87, 34, 0.3); /* Enhanced shadow */

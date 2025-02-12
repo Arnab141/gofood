@@ -58,7 +58,7 @@
 
 import userModel from "../models/usermodel.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import validator from "validator";
 
 // Create Token with Expiry
