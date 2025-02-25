@@ -7,9 +7,10 @@ import List from './pages/List/List'
 import Orders from './pages/Orders/Orders'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { url } from './assets/admin_assets/assets.js'
 
 function App() {
-  const url = "http://localhost:4000";
+  // const url = "https://gofood-vg1g.onrender.com";
   return (
     <div>
       <ToastContainer/>

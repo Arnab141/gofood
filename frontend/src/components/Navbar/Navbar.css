@@ -109,6 +109,12 @@
 .nav-profile-dropdown li:hover{
     color: tomato;
 }
+.navbar-search-icon:hover{
+    border-bottom: 4px solid green;
+}
+.basket{
+ width:40px;
+}
 @media (max-width:1050px){
     .navbar .logo{
         width:140px;
@@ -156,3 +162,5 @@
 
 
 /* 02:07 */
+
+

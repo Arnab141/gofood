@@ -63,7 +63,7 @@ import validator from "validator";
 
 // Create Token with Expiry
 const createToken = (id) => {
-    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+    return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "200h" });
 };
 
 // Login User

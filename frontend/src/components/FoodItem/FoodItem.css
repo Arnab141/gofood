@@ -153,13 +153,13 @@ food-item-name-rating img{
     right: 15px;
     cursor: pointer;
     border-radius: 8px; /* Slightly rounded corners */
-    background-color: rgb(253, 142, 102);
+    background: linear-gradient(135deg, #ff9800, #ff440b);
     padding: 5px 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: all 0.3s ease-in-out;
     font-weight: bold;
     color: #333;
-    border: 2px solid #ff9800; /* Orange border */
+    border: 2px solid #706c67; /* Orange border */
     font-size: 14px;
     text-transform: uppercase;
 }
